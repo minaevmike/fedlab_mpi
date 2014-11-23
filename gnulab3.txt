@@ -1,0 +1,4 @@
+set cblabel "Score"
+set xrange [0:119]
+set yrange [0:50]
+set view map

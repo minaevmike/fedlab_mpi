@@ -1,0 +1,99 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+C	mpi61.c	11;"	d	file:
+C	mpi61_vis2.c	11;"	d	file:
+C	mpi61shma.c	11;"	d	file:
+CUR	mpi61.c	15;"	d	file:
+CUR	mpi61_vis2.c	15;"	d	file:
+CUR	mpi61shma.c	15;"	d	file:
+CUR_NOD	mpi61.c	16;"	d	file:
+CUR_NOD	mpi61_vis2.c	16;"	d	file:
+CUR_NOD	mpi61shma.c	16;"	d	file:
+R	mpi61.c	12;"	d	file:
+R	mpi61_vis2.c	12;"	d	file:
+R	mpi61shma.c	12;"	d	file:
+T2C	mpi61.c	14;"	d	file:
+T2C	mpi61_vis2.c	14;"	d	file:
+T2C	mpi61shma.c	14;"	d	file:
+_REENTRANT	mpi61.c	9;"	d	file:
+_REENTRANT	mpi61_vis2.c	9;"	d	file:
+_REENTRANT	mpi61shma.c	9;"	d	file:
+bp	mpi61.c	/^pthread_barrier_t bp;$/;"	v
+bp	mpi61_vis2.c	/^pthread_barrier_t bp;$/;"	v
+bp	mpi61shma.c	/^pthread_barrier_t bp;$/;"	v
+compute	mpi61.c	/^void compute(int first, int last, int myrank)$/;"	f
+compute	mpi61_vis2.c	/^void compute(int first, int last, int myrank)$/;"	f
+compute	mpi61shma.c	/^void compute(int first, int last, int myrank)$/;"	f
+dtv	mpi61.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:
+dtv	mpi61_vis2.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:
+dtv	mpi61shma.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:
+flow	mpi61.c	/^double *flow;\/\/mass of currencies$/;"	v
+flow	mpi61_vis2.c	/^double *flow;\/\/mass of currencies$/;"	v
+flow	mpi61shma.c	/^double *flow;\/\/mass of currencies$/;"	v
+getFirstById	mpi61.c	/^int getFirstById(int id)$/;"	f
+getFirstById	mpi61_vis2.c	/^int getFirstById(int id)$/;"	f
+getFirstById	mpi61shma.c	/^int getFirstById(int id)$/;"	f
+getLastById	mpi61.c	/^int getLastById(pthread_t id)$/;"	f
+getLastById	mpi61_vis2.c	/^int getLastById(pthread_t id)$/;"	f
+getLastById	mpi61shma.c	/^int getLastById(pthread_t id)$/;"	f
+ht	mpi61.c	/^double ht;$/;"	v
+ht	mpi61_vis2.c	/^double ht;$/;"	v
+ht	mpi61shma.c	/^double ht;$/;"	v
+main	mpi61.c	/^int main(int argc, char const *argv[])$/;"	f
+main	mpi61_vis2.c	/^int main(int argc, char const *argv[])$/;"	f
+main	mpi61shma.c	/^int main(int argc, char const *argv[])$/;"	f
+nodes_len	mpi61.c	/^int nodes_len;$/;"	v
+nodes_len	mpi61_vis2.c	/^int nodes_len;$/;"	v
+nodes_len	mpi61shma.c	/^int nodes_len;$/;"	v
+nodes_num	mpi61.c	/^int nodes_num;$/;"	v
+nodes_num	mpi61_vis2.c	/^int nodes_num;$/;"	v
+nodes_num	mpi61shma.c	/^int nodes_num;$/;"	v
+nodes_per_thread	mpi61.c	/^int nodes_per_thread;$/;"	v
+nodes_per_thread	mpi61_vis2.c	/^int nodes_per_thread;$/;"	v
+nodes_per_thread	mpi61shma.c	/^int nodes_per_thread;$/;"	v
+nodes_wid	mpi61.c	/^int nodes_wid;$/;"	v
+nodes_wid	mpi61_vis2.c	/^int nodes_wid;$/;"	v
+nodes_wid	mpi61shma.c	/^int nodes_wid;$/;"	v
+part_by_thread	mpi61.c	/^pthread_t* part_by_thread;$/;"	v
+part_by_thread	mpi61_vis2.c	/^pthread_t* part_by_thread;$/;"	v
+part_by_thread	mpi61shma.c	/^pthread_t* part_by_thread;$/;"	v
+threads_num	mpi61.c	/^int threads_num;$/;"	v
+threads_num	mpi61_vis2.c	/^int threads_num;$/;"	v
+threads_num	mpi61shma.c	/^int threads_num;$/;"	v
+time_num	mpi61.c	/^int time_num;$/;"	v
+time_num	mpi61_vis2.c	/^int time_num;$/;"	v
+time_num	mpi61shma.c	/^int time_num;$/;"	v
+time_start	mpi61.c	/^void time_start() { gettimeofday(&tv1, &tz); }$/;"	f
+time_start	mpi61_vis2.c	/^void time_start() { gettimeofday(&tv1, &tz); }$/;"	f
+time_start	mpi61shma.c	/^void time_start() { gettimeofday(&tv1, &tz); }$/;"	f
+time_stop	mpi61.c	/^long time_stop()$/;"	f
+time_stop	mpi61_vis2.c	/^long time_stop()$/;"	f
+time_stop	mpi61shma.c	/^long time_stop()$/;"	f
+tv1	mpi61.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:timeval
+tv1	mpi61_vis2.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:timeval
+tv1	mpi61shma.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:timeval
+tv2	mpi61.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:
+tv2	mpi61_vis2.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:
+tv2	mpi61shma.c	/^struct timeval tv1,tv2,dtv;$/;"	v	typeref:struct:
+tz	mpi61.c	/^struct timezone tz;$/;"	v	typeref:struct:timezone
+tz	mpi61_vis2.c	/^struct timezone tz;$/;"	v	typeref:struct:timezone
+tz	mpi61shma.c	/^struct timezone tz;$/;"	v	typeref:struct:timezone
+visualiser	mpi61.c	/^void visualiser(void)$/;"	f
+visualiser	mpi61_vis2.c	/^void visualiser(void)$/;"	f
+visualiser	mpi61shma.c	/^void visualiser(void)$/;"	f
+volt_cur	mpi61.c	/^double *volt_cur;\/\/mass inside time step$/;"	v
+volt_cur	mpi61_vis2.c	/^double *volt_cur;\/\/mass inside time step$/;"	v
+volt_cur	mpi61shma.c	/^double *volt_cur;\/\/mass inside time step$/;"	v
+volt_last	mpi61.c	/^double *volt_last;\/\/mass inside last time step$/;"	v
+volt_last	mpi61_vis2.c	/^double *volt_last;\/\/mass inside last time step$/;"	v
+volt_last	mpi61shma.c	/^double *volt_last;\/\/mass inside last time step$/;"	v
+volt_last_hard	mpi61.c	/^double *volt_last_hard;\/\/mass inside time step$/;"	v
+volt_last_hard	mpi61_vis2.c	/^double *volt_last_hard;\/\/mass inside time step$/;"	v
+volt_last_hard	mpi61shma.c	/^double *volt_last_hard;\/\/mass inside time step$/;"	v
+whatIs	mpi61.c	/^char whatIs(int i)$/;"	f
+whatIs	mpi61_vis2.c	/^char whatIs(int i)$/;"	f
+whatIs	mpi61shma.c	/^char whatIs(int i)$/;"	f
