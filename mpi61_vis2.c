@@ -98,8 +98,7 @@ void compute(int first, int last, int myrank)
     MPI_Status stat;
     double * volt_cur_mini = malloc(sizeof(double));
     volt_cur_mini = (double *)calloc(last-first, sizeof(double));
-    printf("Some info %d %d %d\n", first, last, myrank);
-    for(t=0; t<time_num; t++)
+    for(t=0; t < time_num; t++)
     {	
         //if(t==0)time_start();//////////
         for(i=first; i<last; i++)
@@ -109,31 +108,32 @@ void compute(int first, int last, int myrank)
             {
                 case 1: //leftside
                     volt_cur[i] = volt_last[i] +
-                        (ht/C)*(flow[0] + (1.0/R)*
+                        (ht/C)*(flow[i] + (1.0/R)*
                                 (-volt_last[i] + volt_last[i+1]));
                     break;
                 case 2: //rightside
                     volt_cur[i] = volt_last[i] +
-                        (ht/C)*(-flow[1] + (1.0/R)*
+                        (ht/C)*(flow[i] + (1.0/R)*
                                 (-volt_last[i] + volt_last[i-1]));
                     break;
                 case 3: //inside
                     volt_cur[i] = volt_last[i] +
-                        (ht/C)*((1.0/R)*
+                        (ht/C)*(flow[i] + (1.0/R)*
                                 (-2.0*volt_last[i] + volt_last[i+1]+ 
                                  volt_last[i-1]));
             }
 
         }
         //barrier !!!!!
-        //MPI_Barrier(MPI_COMM_WORLD);
+        MPI_Barrier(MPI_COMM_WORLD);
 
 
         //swapping
 
         //for(i = 0; i<(last-first); volt_cur_mini[i] = volt_cur[i+first],i++);
-        for(i = first; i<(last); volt_last[i] = volt_cur[i],i++);
-
+        for(i = first; i<(last); volt_last[i] = volt_cur[i],i++) {
+        }
+    
 
 
         MPI_Barrier(MPI_COMM_WORLD);
@@ -192,7 +192,7 @@ int main(int argc, char const *argv[])
     nodes_wid = atoi(argv[1]);
     //threads_num = atoi(argv[2]);
     int m_time = atoi(argv[2]);
-    ht = (C/T2C);
+    ht = (C/T2C) * 1e-1;
 
     int myrank, total, i;
     MPI_Init(&argc,&argv);
@@ -207,18 +207,18 @@ int main(int argc, char const *argv[])
     else
         nodes_per_thread = (int)((double)nodes_num/(double)threads_num);
     time_num = (int)(m_time/ht);
-
+    
     volt_cur = (double *)calloc(nodes_num, sizeof(double));
     for(i = 0; i<nodes_num; volt_cur[i++] = 0.0);
     volt_last = (double *)calloc(nodes_num, sizeof(double));
     for(i = 0; i<nodes_num; volt_last[i++] = 0.0);
-    volt_last[0]=100;
-    volt_last[nodes_num-1]=50;
+    //volt_last[0]=100;
+    //volt_last[nodes_num-1]=50;
 
     //allocate currency memory
-    flow = (double *)calloc(nodes_len*2, sizeof(double));
-    for(i = 0; i<nodes_len*2; flow[i++] = 0.0);
-    flow[CUR_NOD]=CUR;
+    flow = (double *)calloc(nodes_wid, sizeof(double));
+    for(i = 0; i < nodes_wid; flow[i++] = 0.0);
+    flow[nodes_wid / 2]=CUR;
     if(!myrank)
     {
         //super hard array
@@ -255,7 +255,8 @@ int main(int argc, char const *argv[])
     if(!myrank)
     {	
         fprintf(stderr,"Time: %ld\n", time_stop());
-        system("gnuplot \"gnulab.txt\""); //Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ
+        system("gnuplot -persist \"gnulab.txt\""); //Ñ‡Ñ‚Ð¾Ð±Ñ‹ Ð¿Ñ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ Ñ€Ð°Ð±Ð¾Ñ‚Ñƒ
+        
     }
 
     // pthread_barrier_destroy(&bp);
