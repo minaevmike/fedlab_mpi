@@ -109,12 +109,12 @@ void compute(int first, int last, int myrank)
                 case 1: //leftside
                     volt_cur[i] = volt_last[i] +
                         (ht/C)*(flow[i] + (1.0/R)*
-                                (-volt_last[i] + volt_last[i+1]));
+                                (-2*volt_last[i] + volt_last[i+1]));
                     break;
                 case 2: //rightside
                     volt_cur[i] = volt_last[i] +
                         (ht/C)*(flow[i] + (1.0/R)*
-                                (-volt_last[i] + volt_last[i-1]));
+                                (-2*volt_last[i] + volt_last[i-1]));
                     break;
                 case 3: //inside
                     volt_cur[i] = volt_last[i] +
